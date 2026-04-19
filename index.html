@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanar Coffee - Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-switch" id="theme-toggle"><i class="fas fa-moon"></i></div>
+
+    <div class="container">
+        <header>
+            <h1>Fanar Coffee</h1> 
+            <p>Specialty Coffee & More</p>
+        </header>
+
+        <main>
+            <div class="menu-item best-seller">
+                <div class="badge">Best Seller</div>
+                <img src="Spanish Latte.png" alt="Spanish Latte" class="item-img">
+                <div class="item-info-wrapper">
+                    <div class="item-info">
+                        <span class="item-name">Spanish Latte</span>
+                        <span class="price">22 SAR</span>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>5.0</span>
+                    </div>
+                    <div class="controls">
+                        <button onclick="updateQty('latte', -1)">-</button>
+                        <span id="qty-latte">0</span>
+                        <button onclick="updateQty('latte', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <img src="Flat White.png" alt="Flat White" class="item-img">
+                <div class="item-info-wrapper">
+                    <div class="item-info">
+                        <span class="item-name">Flat White</span>
+                        <span class="price">18 SAR</span>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        <span>4.7</span>
+                    </div>
+                    <div class="controls">
+                        <button onclick="updateQty('flatwhite', -1)">-</button>
+                        <span id="qty-flatwhite">0</span>
+                        <button onclick="updateQty('flatwhite', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <img src="v60.png" alt="V60 Brew" class="item-img">
+                <div class="item-info-wrapper">
+                    <div class="item-info">
+                        <span class="item-name">V60 Drip Coffee</span>
+                        <span class="price">24 SAR</span>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span>4.9</span>
+                    </div>
+                    <div class="controls">
+                        <button onclick="updateQty('v60', -1)">-</button>
+                        <span id="qty-v60">0</span>
+                        <button onclick="updateQty('v60', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <img src="Iced Americano.png" alt="Iced Americano" class="item-img">
+                <div class="item-info-wrapper">
+                    <div class="item-info">
+                        <span class="item-name">Iced Americano</span>
+                        <span class="price">15 SAR</span>
+                    </div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        <span>4.2</span>
+                    </div>
+                    <div class="controls">
+                        <button onclick="updateQty('americano', -1)">-</button>
+                        <span id="qty-americano">0</span>
+                        <button onclick="updateQty('americano', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <button class="order-btn" id="order-summary-btn">Total: 0 SAR | Order Now</button>
+
+        <footer class="site-footer">
+            📍 Dammam, KSA | Open Daily: 7 AM - 11 PM
+        </footer>
+    </div>
+
+    <div id="orderModal" class="modal">
+        <div class="modal-content invoice-card">
+            <div id="modal-body"></div>
+            <div class="modal-actions" id="modal-footer-btns"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

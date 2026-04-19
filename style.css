@@ -1,0 +1,95 @@
+body {
+    background: linear-gradient(-45deg, #f5f5dc, #eaddca, #d2b48c, #f5f5dc);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body.dark-mode {
+    background: linear-gradient(-45deg, #1a0f0d, #2d1b18, #3e2723, #1a0f0d);
+    color: #f5f5dc;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 30px 25px 20px 25px;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.25);
+    margin-bottom: 15px;
+    padding: 15px 12px;
+    border-radius: 20px;
+    position: relative;
+}
+
+/* شارة Best Seller */
+.best-seller { border: 2px solid #d4af37; background: rgba(212, 175, 55, 0.1); }
+.badge {
+    position: absolute; top: -10px; left: 15px;
+    background: #d4af37; color: #fff; font-size: 0.65rem;
+    padding: 3px 10px; border-radius: 10px; font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.item-img { width: 55px; height: 55px; border-radius: 50%; object-fit: cover; margin-right: 15px; }
+
+.item-info-wrapper { flex-grow: 1; display: flex; flex-direction: column; text-align: left; }
+.item-info { display: flex; justify-content: space-between; font-weight: bold; color: #3e2723; }
+body.dark-mode .item-info { color: #f5f5dc; }
+
+.rating { font-size: 0.7rem; color: #d4af37; margin-top: 2px; }
+.rating span { color: #3e2723; font-weight: bold; margin-left: 4px; opacity: 0.7; }
+body.dark-mode .rating span { color: #f5f5dc; }
+
+.controls { display: flex; align-items: center; gap: 12px; margin-top: 8px; }
+.controls button { background: #3e2723; color: white; border: none; border-radius: 8px; width: 28px; height: 28px; cursor: pointer; }
+
+.order-btn {
+    background: #3e2723; color: white; border: none; padding: 15px;
+    border-radius: 20px; width: 100%; font-weight: bold; cursor: pointer; 
+    margin-top: 10px; margin-bottom: 20px; transition: transform 0.2s;
+}
+.order-btn:active { transform: scale(0.96); }
+
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); justify-content: center; align-items: center; z-index: 2000; }
+
+.invoice-card {
+    background: #fff; color: #3e2723; border-radius: 25px;
+    padding: 30px; width: 85%; max-width: 350px; text-align: center;
+}
+
+.invoice-header h2 { margin: 0; letter-spacing: 2px; border-bottom: 2px solid #3e2723; display: inline-block; padding-bottom: 5px; }
+#order-id { font-weight: bold; margin: 15px 0; border-bottom: 1px dashed #ccc; padding-bottom: 10px; font-family: monospace; }
+
+.bill-list { margin: 20px 0; }
+.bill-list p { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f0f0f0; margin: 0; }
+
+.total-section { background: #fdf5e6; padding: 15px; border-radius: 15px; margin-top: 15px; }
+
+.modal-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+.close-btn { background: #3e2723; color: white; border: none; padding: 12px; border-radius: 15px; cursor: pointer; font-weight: bold; }
+.reset-btn { background: #e74c3c; color: white; border: none; padding: 10px; border-radius: 15px; cursor: pointer; font-size: 0.9rem; }
+
+.theme-switch { position: fixed; top: 20px; right: 20px; background: #3e2723; color: white; padding: 12px; border-radius: 50%; cursor: pointer; }
+
+.site-footer { font-size: 0.8rem; opacity: 0.8; margin-top: 5px; }
