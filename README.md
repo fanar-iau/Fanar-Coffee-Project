@@ -20,5 +20,3 @@ An interactive web application designed for coffee ordering, featuring real-time
 To run this project locally, simply clone the repository and open the index file in your preferred web browser.
 
 ---
-
-بعد ما تلصقين النص بالشكل المرتب هذا، انزلي فوق أو يمين واضغطي على زر (Commit changes) الأخضر لحفظ التعديلات بالشكل الصحيح.
